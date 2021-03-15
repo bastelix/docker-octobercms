@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y cron git-core jq unzip vim zip \
   rm -rf /var/lib/apt/lists/* && \
   docker-php-ext-configure zip --with-zip && \
   docker-php-ext-configure gd --with-jpeg --with-webp && \
-  docker-php-ext-install exif gd mysqli opcache pdo_pgsql pdo_mysql zip
+  docker-php-ext-install exif gd mysqli opcache pdo_pgsql pdo_mysql zip bcmath
 
 RUN { \
     echo 'opcache.memory_consumption=128'; \
